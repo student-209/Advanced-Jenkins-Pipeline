@@ -21,6 +21,7 @@ pipeline {
                 echo "Version: ${VERSION}"
                 echo "Environment: ${params.DEPLOY_ENV}"
                 echo "Build Number: ${BUILD_NUMBER}"
+                 echo "Workspace: ${WORKSPACE}"
             }
         }
 

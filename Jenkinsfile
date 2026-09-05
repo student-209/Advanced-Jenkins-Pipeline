@@ -30,11 +30,17 @@ pipeline {
             }
         }
 
+        // stage('Test') {
+        //     steps {
+        //         echo 'Running tests...'
+        //     }
+        // }
         stage('Test') {
-            steps {
-                echo 'Running tests...'
-            }
-        }
+    steps {
+        echo 'Running tests...'
+        error 'Test failed!'
+    }
+}
 
         stage('Deploy') {
             when {
